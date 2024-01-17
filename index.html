@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="icon" href="photos/bookmark_2899445.png">
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bmark.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="text-center mb-5">Bookmarker</h1>
+
+        <hr>
+
+        <div class="section m-5">
+            <h2 class="text-center">
+                <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <div class="site-name m-3">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <label for="sname" class="fw-bold p-2">Site Name</label></br>
+                <input id="Sname" onkeypress="validationName()" type="text" class="p-3 form-control"
+                    style="width: 100%;  height: 35px;" placeholder="Bookmark Name">
+                <p class="text-danger" id="alert"></p>
+            </div>
+            <div class="site-url m-3 ">
+                <i class="fa-solid fa-link"></i>
+                <label for="sname" class=" fw-bold p-2  ">Site URL</label></br>
+                <input id="Surl" onkeypress="validationUrl()" type="text" class="p-3 form-control" style="width: 100%;  height: 35px;"
+                    placeholder="Website URL">
+                    <p class="text-danger" id="alert2"></p>
+            </div>
+            <div class="butt d-flex justify-content-center ">
+                <button id="btn" type="button" class="btn btn-m m-3" onclick="createList()">Submit</button>
+            </div>
+        
+            <!-- <div id="fixed-box " class=" d-none justify-content-center align-items-center">
+                <div class="parent pt-2 ">
+                    <i class="fa-solid fa-circle m-3" style="color: #f15f5d;"></i><i class="fa-solid fa-circle"
+                        style="color: #febe2e;"></i><i class="fa-solid fa-circle m-3" style="color: #4db748;"></i><i class="fa-solid fa-xmark close fs-3" id="closeBtn"></i>
+                    <h5 class="m-3">Site Name or Url is not valid, Please follow the rules below:</h5>
+                    <i class="fa-regular fa-circle-right m-3"  style="color: #bb4120;"></i>
+                    <p class="d-inline">Site name must contain at least 3 characters </p></br>
+                    <i class="fa-regular fa-circle-right m-3"  style="color: #bb4120;"></i>
+                    <p class="d-inline">Site URL must be a valid one</p>
+                </div>
+            </div> -->
+        </div>
+        <hr>
+        <div class="table1">
+            <table class="table mt-4 text-center bg-light">
+                <thead>
+                    <tr>
+                        <th class="text-capitalize">index</th>
+                        <th class="text-capitalize">Website Name</th>
+                        <th class="text-capitalize">Visit</th>
+                        <th class="text-capitalize">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableContent"></tbody>
+            </table>
+        </div>
+
+        <script src="bookmark.js"></script>
+</body>
+
+</html>
